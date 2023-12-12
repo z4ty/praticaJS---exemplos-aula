@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 14</title>
+</head>
+<body style="font-size: 15pt;">
+    <h2>Exemplo 14</h2>
+    <label for="caixa">Mostrar botão</label>
+    <input onclick="adicionar();" id="caixa" type="checkbox"><br>
+    <button style="font-size: 12pt;display: none;">Aperta ai </button>
+    <script>
+        function adicionar(){
+            const marcado = document.getElementById("caixa").checked;
+            console.log(marcado);
+            const botao = document.getElementsByTagName("button")[0];
+            botao.addEventListener("click",function(){
+                const divi = document.createElement("div");
+                const imagem = document.createElement("img"); 
+                imagem.src = "imagens/orinaru.png";
+                divi.appendChild(imagem);
+                document.body.appendChild(divi);
+                const im = document.getElementsByTagName("img")[0];
+            im.addEventListener("click", function() {
+                divi.remove(im); 
+            });
+            });
+            
+            if(marcado)
+                botao.style.display = "inline";
+            else
+                botao.style.display = "none";
+        }
+    </script>
+</body>
+</html>

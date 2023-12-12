@@ -1,0 +1,41 @@
+* {
+    font-family: sans-serif;
+}
+
+.main {
+    width: 400px;
+    padding: 5%;
+    display: block;
+    background: rgb(255, 255, 154);
+    margin: 2%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px black;
+}
+
+.sec {
+    background: rgb(167, 255, 255);
+    padding: 4%;
+    width: 90%;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+button {
+    margin: 2%;
+}
+
+input {
+    margin: 2%;
+}
+
+a{
+    display: block;
+    padding: 1%;
+    margin: 2%;
+}
+a:visited{
+    color: purple;
+}
+a:hover{
+    color: rgb(255, 255, 154);
+}

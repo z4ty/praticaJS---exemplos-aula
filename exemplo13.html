@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 13</title>
+</head>
+<body style="font-size: 15pt;">
+    <h2>Exemplo 13 <br> Mouse over/out</h2>
+
+    <div onmouseover="gira(this);" onmouseout="aspas(this);" style="background-color: rgb(0, 0, 0);width: 300px;height: 200px;color: rgb(0, 255, 0);font-size: 100px;padding-top: 60px;padding-left: 20px;border: 3px solid rgb(0, 255, 0)">
+        GIRA
+    </div>
+    <script>
+        function gira(obj){
+            obj.innerHTML = "ASPAS";
+            obj.style.width = "650px";
+            obj.style.fontSize = "200px";
+            obj.style.paddingTop = "15px";
+        }
+        function aspas(obj){
+            obj.innerHTML = "GIRA";
+            obj.style.width = "300px"
+            obj.style.fontSize = "100px";
+            obj.style.paddingTop = "60px";
+        }
+    </script>
+</body>
+</html>

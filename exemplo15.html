@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">   
+        <h2>Exemplo 15 </h2>
+        <h3>Validação de formulário</h3>
+        <form name="formulario" action="cadastro.php" onsubmit="return validarFormulario();" method="post">
+            <label for="nome">Nome:</label>
+            <input name="nome" id="nome" type="text"> <br>
+            <input id="enviar" type="submit" value="Enviar">
+        </form>
+    </div>
+    <script>
+        function validarFormulario() {
+            let dados = document.forms["formulario"]["nome"].value;
+            if (dados == "") {
+                alert("Preencha o nome corretamente!");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>

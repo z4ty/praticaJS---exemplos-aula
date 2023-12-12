@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-size: 15pt;">
+    <div class="main">
+        <h2>Exemplo 16 </h2>
+        <h3>Validação de formulário - Exemplo 2</h3>
+        <div>
+            <label for="idade">Idade:</label>
+            <input name="idade" id="idade" type="text"> <br>
+            <p id="msg" style="color: rgb(30, 156, 210);"></p>
+            <button id="enviar" onclick="validar();">Enviar</button>
+        </div> 
+    </div>
+    <script>
+        function validar(){
+            const id = document.getElementById("idade").value;
+            let texto;
+            if(isNaN(id) || id<1 || id>130)
+                texto = "É um dinossauro é? coloca essa idade direito!";
+            else
+                texto = "Aceito!";
+            
+            document.getElementById("msg").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

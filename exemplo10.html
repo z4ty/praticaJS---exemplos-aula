@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class ="main">
+        <h2>Cálculo de Média</h2>
+        <label for="nota1" name="nota1">Nota 1:</label>
+        <input id="nota1" type="text" placeholder="0.0"> <br>
+        <label for="nota2" name="nota2">Nota 2:</label>
+        <input id="nota2" type="text" placeholder="0.0"> <br>
+        <div>
+            <button onclick="calcular();">Média</button>
+            <button onclick="limpar();">Limpar</button>
+            <button style="background-color: rgb(100, 100, 100); color: white;" onclick="aterarLayout();">modo bom de vdd</button>
+        </div>
+        <h3 class="result">Resultado:</h3>
+    </div>
+    <script>
+        let modo = 0;
+        function calcular(){
+            const nota1 = parseFloat(document.getElementById("nota1").value);
+            const nota2 = parseFloat(document.getElementById("nota2").value);
+            let media = (nota1+nota2)/2;
+            const resultado = document.getElementsByClassName("result");
+            resultado[0].innerHTML = "Resultado: "+media;  
+        }
+        function limpar(){
+            const caixa = document.getElementsByTagName("input");
+            console.log(caixa);
+            caixa[0].value = "";
+            caixa[1].value = "";
+            document.getElementsByClassName("result")[0].innerHTML = "Resultado:"
+        }
+        function aterarLayout(){
+            const minhaDiv = document.getElementsByTagName("div")[0].style;
+            const meuBotao = document.getElementsByTagName("button")[2].style;
+            if(modo==0){
+                minhaDiv.backgroundColor = "rgb(50, 50, 50)";
+                minhaDiv.color = "white";
+                meuBotao.backgroundColor = "white";
+                meuBotao.color = "black";
+                document.getElementsByTagName("button")[2].innerHTML = "modo ruim";
+                modo=1;
+            }else{
+                minhaDiv.backgroundColor= "rgb(255, 255, 154)";
+                meuBotao.backgroundColor = "rgb(100, 100, 100)";
+                minhaDiv.color = "black";
+                meuBotao.color = "white";
+                document.getElementsByTagName("button")[2].innerHTML = "modo bom de verdade";
+                modo=0;
+            }
+        }
+    </script>
+</body>
+</html>
